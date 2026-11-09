@@ -1,0 +1,17 @@
+# Homework 2 – Part 4: Explanations
+
+**1. Why does Git have a staging area? Give an example where it helps.**
+
+Git has a staging area so I can choose which changes to include in my next commit. For example, if I modify two files but only want to commit one of them, I can stage only that file using `git add`.
+
+**2. What is the difference between `git fetch` and `git pull`?**
+
+`git fetch` downloads new commits from the remote repository but does not apply them to my current branch. `git pull` downloads the changes and integrates them into my current branch, updating my local files.
+
+**3. Which kinds of files belong in `.gitignore`, and why? Name three.**
+
+Files that should not be tracked by Git include environment files (`.env`) containing passwords or API keys, log files (`.log`) containing application activity, and temporary files created by programs. These files are usually unnecessary for sharing the project and may contain sensitive or irrelevant information.
+
+**4. When does a merge become a fast-forward, and when does Git create a merge commit?**
+
+A fast-forward merge happens when the target branch has no new commits since the feature branch was created, so Git can simply move its pointer forward. Git creates a merge commit when both branches have developed independently and contain separate commits that need to be joined.
