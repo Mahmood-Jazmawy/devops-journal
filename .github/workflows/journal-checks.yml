@@ -25,7 +25,8 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         env:
           REASON: ${{ inputs.reason }}
-        run: echo "Reason: $REASON"
+        run: |
+          echo "Reason: $REASON"
 
       - name: Check README exists
         run: test -f README.md
